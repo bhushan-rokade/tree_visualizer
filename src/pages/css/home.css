@@ -40,6 +40,11 @@
   max-width: 80px;
   max-height: 15px;
 }
+.LinkTag {
+  max-width: 200px;
+  height: auto;
+  padding: 4.5%;
+}
 h4 {
   margin: 0;
   margin-top: 7%;
@@ -63,9 +68,11 @@ p.card_content {
   margin-top: 6%;
 }
 .next_button {
+  min-height: 50px;
+  min-width: 50px;
   max-width: 200px;
   height: auto;
-  padding: 4.5%;
+
   border-radius: 100px;
   background-color: rgb(30, 71, 133);
   border: transparent;

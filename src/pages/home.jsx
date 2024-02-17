@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/home.css";
-import treeimage from "./../assets/images/binary_tree.png";
-import rightarrow from "./../assets/images/right_arrow.png";
+import Routes from "./../constants";
+import Card from "../Components/Card";
 
 function Home() {
   return (
@@ -13,36 +13,18 @@ function Home() {
         </div>
         <div className="main_cards">
           <div className="inner_cards">
-            <div className="card">
-              <div className="card_title">
-                <h4>Expression Tree</h4>
-                <p className="card_content">
-                  Contrusting an expression tree from a given expression.
-                  <br />
-                  As well as its evaluation.
-                </p>
-              </div>
-              <div className="button_div">
-                <button className="next_button">
-                  <img src={rightarrow} className="right_arrow" />
-                </button>
-              </div>
-            </div>
-            <div className="card">
-              <div className="card_title">
-                <h4>Binary Search Tree</h4>
-                <p className="card_content">
-                  Contrusting an binary search tree from a given numbers.
-                  <br />
-                  As well as how searching is done.
-                </p>
-              </div>
-              <div className="button_div">
-                <button className="next_button">
-                  <img src={rightarrow} className="right_arrow" />
-                </button>
-              </div>
-            </div>
+            <Card
+              title="Expression Tree"
+              content1="Contrusting an expression tree from a given expression."
+              content2="As well as its evaluation."
+              whereto={Routes.EXPRESSIONTREE}
+            />
+            <Card
+              title="Binary Search Tree"
+              content1="Contrusting an binary search tree from a given numbers."
+              content2="Also how searching is done."
+              whereto={Routes.BST}
+            />
           </div>
         </div>
       </div>
