@@ -76,3 +76,62 @@ div.row_divider_right4 {
   align-items: center;
   margin-top: 4%;
 }
+div.row_divider_left5 {
+  width: 35%;
+  border: 1px solid white;
+  transform: rotate(117deg);
+  margin-top: 2%;
+}
+div.row_divider_right5 {
+  width: 35%;
+  border: 1px solid white;
+  transform: rotate(-117deg);
+  margin-top: 2%;
+}
+div.row_divider_left6 {
+  width: 35%;
+  border: 1px solid white;
+  transform: rotate(117deg);
+  margin-top: 2%;
+}
+div.row_divider_right6 {
+  width: 35%;
+  border: 1px solid white;
+  transform: rotate(-117deg);
+  margin-top: 2%;
+}
+div.row_divider_left7 {
+  width: 35%;
+  border: 1px solid white;
+  transform: rotate(117deg);
+  margin-top: 2%;
+}
+div.row_divider_right7 {
+  width: 35%;
+  border: 1px solid white;
+  transform: rotate(-117deg);
+  margin-top: 2%;
+}
+div.row_divider_left8 {
+  width: 35%;
+  border: 1px solid white;
+  transform: rotate(117deg);
+  margin-top: 2%;
+}
+div.row_divider_right8 {
+  width: 35%;
+  border: 1px solid white;
+  transform: rotate(-117deg);
+  margin-top: 2%;
+}
+.divider_div3 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 4%;
+}
+.inner_divider {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
