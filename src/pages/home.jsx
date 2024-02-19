@@ -8,7 +8,7 @@ function Home() {
     <>
       <div className="home-main-div">
         <div className="title_div">
-          <h1 className="main_title">DS Visualizer</h1>
+          <h1 className="main_title">Tree Visualizer</h1>
           <p>Visualises Data structure trees and their applications</p>
         </div>
         <div className="main_cards">

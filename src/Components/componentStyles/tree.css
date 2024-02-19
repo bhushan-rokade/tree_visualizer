@@ -43,30 +43,27 @@ div.row_divider_right {
   margin-top: 4%;
 }
 div.row_divider_left3 {
-  width: 14%;
+  width: 50%;
   border: 1px solid white;
   transform: rotate(133deg);
-  margin-left: 10%;
   margin-top: 2%;
 }
 div.row_divider_right3 {
-  width: 14%;
+  width: 50%;
   border: 1px solid white;
   transform: rotate(-130deg);
   margin-top: 2%;
 }
 div.row_divider_left4 {
-  width: 15%;
+  width: 50%;
   border: 1px solid white;
   transform: rotate(130deg);
-  margin-left: 20%;
   margin-top: 2%;
 }
 div.row_divider_right4 {
-  width: 15%;
+  width: 50%;
   border: 1px solid white;
   transform: rotate(-132deg);
-  margin-right: 9%;
   margin-top: 2%;
 }
 .divider_div2 {
