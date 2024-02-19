@@ -13,7 +13,8 @@ const waitsec = () => {
 
 const handleSubmit = async () => {
   window.scrollBy(0, 1000);
-
+  // let numarray = numbers.split();
+  // console.log(numarray);
   for (let i = 1; i <= 15; i++) {
     if (i == 2) {
       for (let n = 1; n <= 2; n++) {
@@ -54,13 +55,18 @@ function ExpressionTree() {
           </label>
           <input className="expinput" maxLength={15} />
           <label className="warning_label">*Maximum characters 15</label>
-          <button
-            title="Submit"
-            onClick={handleSubmit}
-            name="Submit"
-            className="submitbtn">
-            Submit
-          </button>
+          <div className="buttons_div">
+            <button
+              onClick={handleSubmit}
+              title="Submit"
+              name="Submit"
+              className="submitbtn">
+              Submit
+            </button>
+            <button title="Submit" name="clear" className="clearbtn">
+              Clear
+            </button>
+          </div>
         </div>
         <hr />
         <Tree />

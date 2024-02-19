@@ -39,22 +39,47 @@ label {
   border: transparent;
   text-align: center;
 }
+.expinput:disabled {
+  color: aliceblue;
+}
 .submitbtn {
-  margin-top: 1%;
   width: 20%;
   justify-self: center;
-  height: 70%;
+  height: 100%;
   border-radius: 20px;
   border: transparent;
   background-color: rgb(30, 71, 133);
   color: aliceblue;
   font-family: monospace;
 }
-
+.buttons_div {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3%;
+}
+.clearbtn {
+  margin-top: 1%;
+  width: 20%;
+  justify-self: center;
+  height: 100%;
+  border-radius: 20px;
+  border: transparent;
+  background-color: rgb(226, 61, 61);
+  color: aliceblue;
+  font-family: monospace;
+}
 .submitbtn:hover {
   transform: scale(1.05);
   /* filter: drop-shadow(0 0 0.3rem rgb(145, 147, 147)); */
   background-color: rgb(16, 36, 66);
+}
+.clearbtn:hover {
+  transform: scale(1.05);
+  /* filter: drop-shadow(0 0 0.3rem rgb(145, 147, 147)); */
+  background-color: rgb(104, 26, 26);
 }
 hr {
   width: 90%;
