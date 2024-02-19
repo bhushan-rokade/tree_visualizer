@@ -5,7 +5,7 @@ function Tree() {
   return (
     <>
       <div className="tree">
-        <div className="row">
+        <div className="row" style={{ marginTop: "2%" }}>
           <div className="node">1</div>
         </div>
         <div className="divider_div">

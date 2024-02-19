@@ -2,6 +2,9 @@ import React from "react";
 import "./css/exptree.css";
 import "./../Components/componentStyles/tree.css";
 import Tree from "../Components/Tree";
+const handleSubmit = () => {
+  window.scrollBy(0, 1000);
+};
 
 function ExpressionTree() {
   return (
@@ -16,7 +19,11 @@ function ExpressionTree() {
           </label>
           <input className="expinput" maxLength={15} />
           <label className="warning_label">*Maximum characters 15</label>
-          <button title="Submit" name="Submit" className="submitbtn">
+          <button
+            title="Submit"
+            onClick={handleSubmit}
+            name="Submit"
+            className="submitbtn">
             Submit
           </button>
         </div>

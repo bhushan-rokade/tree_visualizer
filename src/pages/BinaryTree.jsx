@@ -2,6 +2,9 @@ import React from "react";
 import "./css/exptree.css";
 import "./../Components/componentStyles/tree.css";
 import Tree from "../Components/Tree";
+const handleSubmit = () => {
+  window.scrollBy(0, 1000);
+};
 
 function BinaryTree() {
   return (
@@ -16,7 +19,11 @@ function BinaryTree() {
           </label>
           <input className="expinput" type="number" maxLength={15} />
           <label className="warning_label">*Maximum Numbers 15</label>
-          <button title="Submit" name="Submit" className="submitbtn">
+          <button
+            onClick={handleSubmit}
+            title="Submit"
+            name="Submit"
+            className="submitbtn">
             Submit
           </button>
         </div>
