@@ -48,7 +48,9 @@ label {
   border: transparent;
   background-color: rgb(30, 71, 133);
   color: aliceblue;
+  font-family: monospace;
 }
+
 .submitbtn:hover {
   transform: scale(1.05);
   /* filter: drop-shadow(0 0 0.3rem rgb(145, 147, 147)); */

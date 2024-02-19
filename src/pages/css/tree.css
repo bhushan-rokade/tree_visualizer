@@ -1,0 +1,78 @@
+.tree {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 6%;
+}
+.node {
+  height: 4vh;
+  color: aliceblue;
+  width: 4vh;
+  border: 2px solid aliceblue;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.row_divider_left {
+  width: 19%;
+  border: 1px solid white;
+  transform: rotate(153deg);
+  margin-left: 25%;
+}
+div.row_divider_right {
+  width: 19%;
+  border: 1px solid white;
+  transform: rotate(-153deg);
+  margin-right: 25%;
+}
+.divider_div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 4%;
+}
+div.row_divider_left3 {
+  width: 14%;
+  border: 1px solid white;
+  transform: rotate(133deg);
+  margin-left: 10%;
+  margin-top: 2%;
+}
+div.row_divider_right3 {
+  width: 14%;
+  border: 1px solid white;
+  transform: rotate(-130deg);
+  margin-top: 2%;
+}
+div.row_divider_left4 {
+  width: 15%;
+  border: 1px solid white;
+  transform: rotate(130deg);
+  margin-left: 20%;
+  margin-top: 2%;
+}
+div.row_divider_right4 {
+  width: 15%;
+  border: 1px solid white;
+  transform: rotate(-132deg);
+  margin-right: 9%;
+  margin-top: 2%;
+}
+.divider_div2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 4%;
+}
