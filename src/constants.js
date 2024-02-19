@@ -1,6 +1,6 @@
 const Routes = {
   HOME: "/",
   EXPRESSIONTREE: "/ExpressionTree",
-  BST: "/BINARYTREE",
+  BST: "/BinaryTree",
 };
 export default Routes;

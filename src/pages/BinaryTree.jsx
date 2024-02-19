@@ -3,19 +3,19 @@ import "./css/exptree.css";
 import "./../Components/componentStyles/tree.css";
 import Tree from "../Components/Tree";
 
-function ExpressionTree() {
+function BinaryTree() {
   return (
     <>
       <div className="main-div">
         <div className="headingdiv">
-          <h2 className="main_heading">Expression Tree</h2>
+          <h2 className="main_heading">Binary Search Tree</h2>
         </div>
         <div className="input-div">
           <label style={{ alignSelf: "flex-start" }} className="main_label">
-            Enter Expression
+            Enter Numbers
           </label>
-          <input className="expinput" maxLength={15} />
-          <label className="warning_label">*Maximum characters 15</label>
+          <input className="expinput" type="number" maxLength={15} />
+          <label className="warning_label">*Maximum Numbers 15</label>
           <button title="Submit" name="Submit" className="submitbtn">
             Submit
           </button>
@@ -27,4 +27,4 @@ function ExpressionTree() {
   );
 }
 
-export default ExpressionTree;
+export default BinaryTree;
