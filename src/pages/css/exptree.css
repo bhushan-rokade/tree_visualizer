@@ -64,6 +64,9 @@ hr {
   .submitbtn {
     width: 30%;
   }
+  .main-div {
+    height: 80vh;
+  }
 }
 @media only screen and (min-width: 950px) {
   .input-div {
