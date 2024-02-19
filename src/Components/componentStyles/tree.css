@@ -133,3 +133,8 @@ div.row_divider_right8 {
   display: flex;
   justify-content: center;
 }
+@media only screen and (max-width: 650px) {
+  .tree {
+    padding-bottom: 0px;
+  }
+}
