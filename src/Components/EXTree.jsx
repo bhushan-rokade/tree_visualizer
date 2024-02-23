@@ -1,158 +1,141 @@
 import React from "react";
 import "./componentStyles/tree.css";
 
-const handleSubmit = () => {
-  window.scrollBy(0, 1000);
-  let nodes;
-  let j = 0;
-  for (let i = 1; i <= 15; i++) {
-    nodes[j++] = document.getElementById("n" + i);
-  }
-};
-
 function Tree() {
   return (
     <>
       <div className="tree">
         <div className="row" style={{ marginTop: "2%" }}>
-          <div className="node" id="n1" style={{ display: "none" }}>
-            1
+          <div className="node" id="n1" style={{ visibility: "hidden" }}>
+            +
           </div>
         </div>
         <div className="divider_div">
           <div
             className="row_divider_left"
-            style={{ display: "none" }}
+            style={{ visibility: "hidden" }}
             id="divider1"
           />
           <div
             className="row_divider_right"
-            style={{ display: "none" }}
+            style={{ visibility: "hidden" }}
             id="divider2"
           />
         </div>
 
         <div className="row">
-          <div className="node" id="n2" style={{ display: "none" }}>
-            2
+          <div className="node" id="n2" style={{ visibility: "hidden" }}>
+            A
           </div>
-          <div className="node" id="n3" style={{ display: "none" }}>
-            3
+          <div className="node" id="n3" style={{ visibility: "hidden" }}>
+            *
           </div>
         </div>
         <div className="divider_div2">
           <div className="inner_divider">
             <div
               className="row_divider_left3"
-              style={{ display: "none" }}
-              id="divider3"
+              style={{ visibility: "hidden" }}
             />
             <div
               className="row_divider_right3"
-              style={{ display: "none" }}
-              id="divider4"
+              style={{ visibility: "hidden" }}
             />
           </div>
           <div className="inner_divider">
             <div
               className="row_divider_left4"
-              style={{ display: "none" }}
-              id="divider5"
+              style={{ visibility: "hidden" }}
+              id="divider3"
             />
             <div
               className="row_divider_right4"
-              style={{ display: "none" }}
-              id="divider6"
+              style={{ visibility: "hidden" }}
+              id="divider4"
             />
           </div>
         </div>
         <div className="row">
-          <div className="node" id="n4" style={{ display: "none" }}>
+          <div className="node" style={{ visibility: "hidden" }}>
             4
           </div>
-          <div className="node" id="n5" style={{ display: "none" }}>
+          <div className="node" style={{ visibility: "hidden" }}>
             5
           </div>
-          <div className="node" id="n6" style={{ display: "none" }}>
-            6
+          <div className="node" id="n4" style={{ visibility: "hidden" }}>
+            +
           </div>
-          <div className="node" id="n7" style={{ display: "none" }}>
-            7
+          <div className="node" id="n5" style={{ visibility: "hidden" }}>
+            D
           </div>
         </div>
         <div className="divider_div3">
           <div className="inner_divider">
             <div
               className="row_divider_left5"
-              style={{ display: "none" }}
-              id="divider7"
+              style={{ visibility: "hidden" }}
             />
             <div
               className="row_divider_right5"
-              style={{ display: "none" }}
-              id="divider8"
+              style={{ visibility: "hidden" }}
             />
           </div>
           <div className="inner_divider">
             <div
               className="row_divider_left6"
-              style={{ display: "none" }}
-              id="divider9"
+              style={{ visibility: "hidden" }}
             />
             <div
               className="row_divider_right6"
-              style={{ display: "none" }}
-              id="divider10"
+              style={{ visibility: "hidden" }}
             />
           </div>
           <div className="inner_divider">
             <div
               className="row_divider_left7"
-              style={{ display: "none" }}
-              id="divider11"
+              style={{ visibility: "hidden" }}
+              id="divider5"
             />
             <div
               className="row_divider_right7"
-              id="divider12"
-              style={{ display: "none" }}
+              id="divider6"
+              style={{ visibility: "hidden" }}
             />
           </div>
           <div className="inner_divider">
             <div
               className="row_divider_left8"
-              style={{ display: "none" }}
-              id="divider13"
+              style={{ visibility: "hidden" }}
             />
             <div
               className="row_divider_right8"
-              style={{ display: "none" }}
-              id="divider14"
+              style={{ visibility: "hidden" }}
             />
           </div>
         </div>
         <div className="row">
-          <div className="node" id="n8" style={{ display: "none" }}>
+          <div className="node" style={{ visibility: "hidden" }}>
             8
           </div>
-          <div className="node" id="n9" style={{ display: "none" }}>
+          <div className="node" style={{ visibility: "hidden" }}>
             9
           </div>
-          <div className="node" id="n10" style={{ display: "none" }}>
+          <div className="node" style={{ visibility: "hidden" }}>
             10
           </div>
-          <div className="node" id="n11" style={{ display: "none" }}>
+          <div className="node" style={{ visibility: "hidden" }}>
             11
           </div>
-          <div className="node" id="n12" style={{ display: "none" }}>
-            12
+          <div className="node" id="n6" style={{ visibility: "hidden" }}>
+            B
           </div>
-          <div className="node" id="n13" style={{ display: "none" }}>
-            13
+          <div className="node" id="n7" style={{ visibility: "hidden" }}>
+            C
           </div>
-          <div className="node" id="n14" style={{ display: "none" }}>
+          <div className="node" style={{ visibility: "hidden" }}>
             14
           </div>
-          <div className="node" id="n15" style={{ display: "none" }}>
+          <div className="node" style={{ visibility: "hidden" }}>
             15
           </div>
         </div>

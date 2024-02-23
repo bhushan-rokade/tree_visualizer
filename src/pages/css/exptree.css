@@ -9,9 +9,16 @@ label {
   color: aliceblue;
   font-family: monospace;
 }
+.headingdiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+}
 .main_heading {
   font-family: monospace;
   color: aliceblue;
+  text-align: center;
 }
 .warning_label {
   align-self: flex-end;
@@ -42,10 +49,12 @@ label {
 .expinput:disabled {
   color: aliceblue;
 }
-.submitbtn {
+.buildbtn {
   width: 20%;
   justify-self: center;
-  height: 100%;
+  font-size: medium;
+  min-height: 6vh;
+  margin-top: 1%;
   border-radius: 20px;
   border: transparent;
   background-color: rgb(30, 71, 133);
@@ -57,8 +66,8 @@ label {
   height: 70%;
   display: flex;
   justify-content: space-evenly;
+  flex-direction: column;
   align-items: center;
-  margin-top: 3%;
 }
 .clearbtn {
   margin-top: 1%;
@@ -71,7 +80,7 @@ label {
   color: aliceblue;
   font-family: monospace;
 }
-.submitbtn:hover {
+.buildbtn:hover {
   transform: scale(1.05);
   /* filter: drop-shadow(0 0 0.3rem rgb(145, 147, 147)); */
   background-color: rgb(16, 36, 66);
@@ -85,12 +94,162 @@ hr {
   width: 90%;
   margin-top: 5%;
 }
+.intro_text {
+  color: aliceblue;
+  font-family: monospace;
+  margin-left: 2%;
+  margin-right: 2%;
+  text-align: center;
+  margin-top: 2%;
+}
+.controls_div {
+  height: auto;
+  width: 90%;
+}
+.traversal_buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 60%;
+  place-self: flex-start;
+  margin-top: 1%;
+}
+#prefix_traversal {
+  border: transparent;
+  border-radius: 15px;
+  width: 25%;
+  min-height: 4vh;
+  background-color: rgb(16, 137, 137);
+  font-family: monospace;
+  color: rgb(212, 212, 212);
+}
+#infix_traversal {
+  border: transparent;
+  border-radius: 15px;
+  font-family: monospace;
+  width: 25%;
+  min-height: 4vh;
+  background-color: rgb(60, 62, 61);
+  color: rgb(212, 212, 212);
+}
+#postfix_traversal {
+  border: transparent;
+  border-radius: 15px;
+  font-family: monospace;
+  width: 25%;
+  min-height: 4vh;
+  background-color: rgb(162, 86, 46);
+  color: rgb(212, 212, 212);
+}
+#bst_operations {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+#input_div {
+  place-self: flex-end;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 40%;
+}
+#inner_inputdiv {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#searchlabel {
+  font-size: 9.5px;
+  text-align: center;
+}
+#search_input {
+  place-self: flex-start;
+  align-self: center;
+  border-radius: 10px;
+  height: 50%;
+  width: 35%;
+  font-size: 10px;
+  margin-top: 1%;
+}
+#search_input :disabled {
+  color: aliceblue;
+}
+#searchbtn {
+  border-radius: 35px;
+  font-size: small;
+  border: transparent;
+  width: 15%;
+  background-color: rgb(57, 84, 84);
+  text-align: center;
+  color: aliceblue;
+  justify-self: center;
+  align-self: center;
+  height: 50%;
+}
+#clearbtn {
+  width: 15%;
+  height: 50%;
+  place-self: center;
+  margin-left: 3%;
+  border-radius: 30px;
+  background-color: rgb(187, 90, 90);
+  color: aliceblue;
+  border: transparent;
+}
+#evaluatebtn {
+  width: 40%;
+  align-self: center;
+  height: 40%;
+  border-radius: 30px;
+  background-color: rgb(208, 72, 100);
+  color: white;
+  border: transparent;
+}
+#evaluatebtn:hover {
+  background-color: rgb(76, 32, 40);
+  transform: scale(1.1);
+}
+#searchbtn:hover {
+  transform: scale(1.1);
+  color: aliceblue;
+}
+hr {
+  margin-top: 0%;
+}
 @media only screen and (max-width: 650px) {
   .submitbtn {
     width: 30%;
   }
   .main-div {
     height: 80vh;
+  }
+  #searchbtn {
+    width: 20%;
+    height: 60%;
+  }
+  .buildbtn {
+    width: 30%;
+  }
+  #clearbtn {
+    height: 60%;
+    width: 20%;
+  }
+  #search_input {
+    height: 30%;
+    width: 50%;
+  }
+  #prefix_traversal {
+    width: 35%;
+  }
+  #infix_traversal {
+    width: 35%;
+  }
+  #postfix_traversal {
+    width: 38%;
   }
 }
 @media only screen and (min-width: 950px) {

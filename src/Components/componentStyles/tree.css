@@ -4,6 +4,7 @@
   flex-direction: column;
   width: 100%;
   padding-bottom: 5%;
+  margin-top: 12%;
 }
 .row {
   display: flex;
@@ -13,9 +14,9 @@
   margin-top: 6%;
 }
 .node {
-  height: 4vh;
+  height: 5vh;
   color: aliceblue;
-  width: 4vh;
+  width: 5vh;
   border: 2px solid aliceblue;
   border-radius: 30px;
   display: flex;
@@ -133,8 +134,19 @@ div.row_divider_right8 {
   display: flex;
   justify-content: center;
 }
+.glow {
+  filter: drop-shadow(0 0 0.6em rgb(255, 190, 51));
+  transition: filter 1s;
+}
 @media only screen and (max-width: 650px) {
   .tree {
-    padding-bottom: 0px;
+    padding-bottom: 50px;
+    margin-top: 30%;
+  }
+}
+@media only screen and (max-width: 1000px) and (min-width: 650px) {
+  .tree {
+    padding-bottom: 50px;
+    margin-top: 19%;
   }
 }
