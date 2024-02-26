@@ -138,6 +138,21 @@ div.row_divider_right8 {
   filter: drop-shadow(0 0 0.6em rgb(255, 190, 51));
   transition: filter 1s;
 }
+.glow_infinite {
+  filter: drop-shadow(0 0 0.6em rgb(255, 190, 51));
+  transition: filter infinite;
+}
+.fade {
+  transition: fade 2s smooth;
+}
+@keyframes fadeanime {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 @media only screen and (max-width: 650px) {
   .tree {
     padding-bottom: 50px;

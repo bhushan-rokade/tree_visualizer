@@ -13,6 +13,7 @@ const waitsec = () => {
 function BinaryTree() {
   const [disabled, setDisabled] = useState(false);
 
+  //node structures or objects
   const n1 = {
     name: "n1",
     value: 8,
@@ -85,6 +86,7 @@ function BinaryTree() {
     left_node: null,
     right_node: null,
   };
+  //binding the nodes of the tree for performing searching
   n1.left_node = n2;
   n1.right_node = n3;
   n2.left_node = n4;
@@ -129,7 +131,9 @@ function BinaryTree() {
     }
   };
 
-  const rechide = (thisone) => {
+  const rechide = async (thisone) => {
+    //for hiding elements while searching the element in the BST
+    document.querySelector("#" + thisone.name).classList.add("fade");
     document.querySelector("#" + thisone.name).style.visibility = "hidden";
     if (thisone.left_divider != null)
       document.querySelector("#" + thisone.left_divider).style.visibility =
@@ -141,8 +145,25 @@ function BinaryTree() {
     if (thisone.right_node != null) rechide(thisone.right_node);
   };
 
-  const recsearch = (currentItem) => {
+  const recsearch = async (currentItem) => {
+    document
+      .querySelector("#" + currentItem.name)
+      .classList.add("glow_infinite");
     if (currentItem.value == numbers) {
+      if (currentItem.left_divider != null) {
+        document.getElementById(currentItem.left_divider).style.visibility =
+          "hidden";
+      }
+      if (currentItem.right_divider != null) {
+        document.getElementById(currentItem.right_divider).style.visibility =
+          "hidden";
+      }
+      if (currentItem.left_node != null) {
+        await rechide(currentItem.left_node);
+      }
+      if (currentItem.right_node != null) {
+        await rechide(currentItem.right_node);
+      }
       return 1;
     } else if (currentItem.value > numbers) {
       if (currentItem.right_node != null) {
@@ -151,9 +172,15 @@ function BinaryTree() {
             "#" + currentItem.right_divider
           ).style.visibility = "hidden";
         rechide(currentItem.right_node);
-        return recsearch(currentItem.left_node);
+        await new Promise((resolve, reject) => {
+          setTimeout(() => resolve(), 4000);
+        });
+        return await recsearch(currentItem.left_node);
       } else if (currentItem.left_node != null) {
-        return recsearch(currentItem.left_node);
+        await new Promise((resolve, reject) => {
+          setTimeout(() => resolve(), 4000);
+        });
+        return await recsearch(currentItem.left_node);
       } else {
         return 0;
       }
@@ -164,13 +191,20 @@ function BinaryTree() {
             "#" + currentItem.left_divider
           ).style.visibility = "hidden";
           rechide(currentItem.left_node);
-          if (currentItem.right_divider != null)
-            return recsearch(currentItem.right_node);
-          else return 0;
+          if (currentItem.right_divider != null) {
+            await new Promise((resolve, reject) => {
+              setTimeout(() => resolve(), 4000);
+            });
+            return await recsearch(currentItem.right_node);
+          } else return 0;
         }
       } else if (currentItem.right_node != null) {
-        if (currentItem.right_divider != null)
-          return recsearch(currentItem.right_node);
+        if (currentItem.right_divider != null) {
+          await new Promise((resolve, reject) => {
+            setTimeout(() => resolve(), 4000);
+          });
+          return await recsearch(currentItem.right_node);
+        }
       } else {
         return 0;
       }
@@ -188,10 +222,10 @@ function BinaryTree() {
     }
   };
 
-  const handleClear = () => {
+  const handleClear = async () => {
     setNumbers(0);
+    await handleSubmit();
     setDisabled(false);
-    handleSubmit();
   };
   return (
     <>
