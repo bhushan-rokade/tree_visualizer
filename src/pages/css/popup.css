@@ -84,9 +84,9 @@
     height: 40%;
   }
 }
-@media only screen and (max-width: 545px) {
+@media only screen and (max-width: 527px) {
   #modal {
     width: 70%;
-    height: 55%;
+    height: 65%;
   }
 }
