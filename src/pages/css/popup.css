@@ -65,9 +65,23 @@
 .submiteval:hover {
   background-color: rgb(3, 205, 67);
 }
+.cleareval {
+  margin-left: 2%;
+  width: 10vh;
+  height: 3.5vh;
+  background-color: rgb(238, 96, 96);
+  border-radius: 10px;
+  border: transparent;
+  color: black;
+  font-family: monospace;
+}
+.cleareval:hover {
+  background-color: rgb(205, 3, 3);
+}
 .submit-div {
   display: flex;
   justify-content: center;
+  margin-top: 5%;
 }
 .input {
   height: 2.5vh;
@@ -84,7 +98,7 @@
     height: 40%;
   }
 }
-@media only screen and (max-width: 527px) {
+@media only screen and (max-width: 543.5px) {
   #modal {
     width: 70%;
     height: 65%;

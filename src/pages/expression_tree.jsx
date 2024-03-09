@@ -173,6 +173,7 @@ function ExpressionTree() {
           </div>
           <div className="submit-div">
             <button className="submiteval">Sumbit</button>
+            <button className="cleareval">Clear</button>
           </div>
         </div>
       </div>
