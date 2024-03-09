@@ -1,0 +1,91 @@
+#modal {
+  width: 40%;
+  height: 50%;
+  position: absolute;
+  background-color: aliceblue;
+  top: 50%;
+  display: none;
+  transform: translate(0, -50%);
+  z-index: 10;
+  border-radius: 20px;
+  filter: blur(0);
+}
+.blur-main :not(#modal):not(#modal *):not(.controls),
+.blur-main :not(#modal):not(#modal *):not(.controls) * {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
+}
+.controls {
+  filter: blur(0px);
+  z-index: 10;
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+#closebtn {
+  border-radius: 5px;
+  border: transparent;
+  background-color: rgb(237, 79, 79);
+  color: aliceblue;
+  width: 25px;
+  height: 20px;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: monospace;
+  font-size: large;
+}
+.inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: monospace;
+  font-size: large;
+}
+.inner_field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.submiteval {
+  width: 10vh;
+  height: 3.5vh;
+  background-color: rgb(30, 252, 115);
+  border-radius: 10px;
+  border: transparent;
+  color: black;
+}
+.submiteval:hover {
+  background-color: rgb(3, 205, 67);
+}
+.submit-div {
+  display: flex;
+  justify-content: center;
+}
+.input {
+  height: 2.5vh;
+  width: 40%;
+  margin-left: 5%;
+  border: rgb(89, 89, 89) 0.1px solid;
+  border-radius: 10px;
+  font-family: monospace;
+  font-size: small;
+}
+@media only screen and (max-width: 950px) {
+  #modal {
+    width: 70%;
+    height: 40%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  #modal {
+    width: 70%;
+    height: 50%;
+  }
+}

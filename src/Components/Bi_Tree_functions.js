@@ -1,3 +1,12 @@
+export const waitsec = () => {
+  //for giving delay
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve();
+    }, 500);
+  });
+};
+
 export function handleSearch2(numbers) {
   //node structures or objects
   const n1 = {
@@ -83,6 +92,7 @@ export function handleSearch2(numbers) {
   n6.left_node = n9;
 
   let is_here = false;
+
   const checkNumber = (currentItem) => {
     //for checking if the element exists in the tree or not
     if (numbers == currentItem.value) {
@@ -221,3 +231,40 @@ export function handleSearch2(numbers) {
   }
   return recsearch(n1);
 }
+
+export const handleSubmit = async () => {
+  //for displaing the binary tree
+  window.scrollBy(0, 1000);
+  for (let i = 1; i <= 9; i++) {
+    if (i > 1) {
+      document.getElementById("n" + (i - 1)).classList.remove("glow");
+    }
+    document.getElementById("n" + i).classList.add("glow");
+    if (i == 2) {
+      for (let n = 1; n <= 2; n++) {
+        document.getElementById("divider" + n).style.visibility = "initial";
+        await waitsec();
+      }
+    } else if (i == 6) {
+      for (let n = 3; n <= 5; n++) {
+        document.getElementById("divider" + n).style.visibility = "initial";
+        document.getElementById("divider" + n).style.visibility = "initial";
+        await waitsec();
+      }
+    } else if (i == 9) {
+      for (let n = 6; n <= 8; n++) {
+        document.getElementById("n" + i).style.visibility = "initial";
+        document.getElementById("divider" + n).style.visibility = "initial";
+        await waitsec();
+        if (n == 8) {
+          document.getElementById("n" + i).classList.remove("glow");
+        }
+      }
+    }
+    if (i < 15 || i == 7) {
+      document.getElementById("n" + i).style.visibility = "initial";
+    }
+    await waitsec();
+  }
+  document.getElementById("input_div").style.display = "flex";
+};

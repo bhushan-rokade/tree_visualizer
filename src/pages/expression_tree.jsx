@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./css/exptree.css";
 import "./../Components/componentStyles/tree.css";
 import Tree from "../Components/EXTree";
+import "./css/popup.css";
 const waitsec = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
@@ -11,36 +12,30 @@ const waitsec = () => {
 };
 
 function ExpressionTree() {
+  const [traversalString, setString] = useState("");
+  const [modalOpen, setModalOpen] = useState(false);
   const bstArray = [8, 3, 1, 6, 4, 7, 10, 14, 13];
-  const [numbers, setNumbers] = useState(0);
   const handleSubmit = async () => {
     window.scrollBy(0, 1000);
     document.getElementById("intro_bst").style.display = "flex";
     document.getElementById("bst_operations").style.display = "flex";
 
-    for (let i = 1; i <= 15; i++) {
-      if (i > 1) {
-        document.getElementById("n" + (i - 1)).classList.remove("glow");
-      }
-      document.getElementById("n" + i).classList.add("glow");
+    for (let i = 1; i <= 7; i++) {
       if (i == 2) {
         for (let n = 1; n <= 2; n++) {
           document.getElementById("divider" + n).style.visibility = "initial";
-          console.log("divider" + n);
           await waitsec();
         }
       } else if (i == 5) {
         for (let n = 3; n <= 4; n++) {
           document.getElementById("divider" + n).style.visibility = "initial";
           document.getElementById("divider" + n).style.visibility = "initial";
-          console.log("divider" + n);
           await waitsec();
         }
       } else if (i == 7) {
         for (let n = 5; n <= 6; n++) {
           document.getElementById("n" + i).style.visibility = "initial";
           document.getElementById("divider" + n).style.visibility = "initial";
-          console.log("divider" + n);
           await waitsec();
         }
       }
@@ -49,6 +44,15 @@ function ExpressionTree() {
       }
       await waitsec();
     }
+    document.getElementById("evaluatebtn").style.display = "block";
+  };
+  const handleEvaluate = () => {
+    document.getElementById("modal").style.display = "block";
+    document.querySelector(".main-div").classList.add("blur-main");
+  };
+  const closeModal = () => {
+    document.getElementById("modal").style.display = "none";
+    document.querySelector(".main-div").classList.remove("blur-main");
   };
   return (
     <>
@@ -78,9 +82,28 @@ function ExpressionTree() {
             </h4>
             <div id="bst_operations" style={{ display: "none" }}>
               <div className="traversal_buttons">
-                <button id="prefix_traversal">Preorder</button>
-                <button id="infix_traversal">Inorder</button>
-                <button id="postfix_traversal">Postorder</button>
+                <button
+                  id="prefix_traversal"
+                  onClick={() => {
+                    setString("Preorder : ");
+                  }}>
+                  Preorder
+                </button>
+                <button
+                  id="infix_traversal"
+                  onClick={() => {
+                    setString("Inorder : ");
+                  }}>
+                  Inorder
+                </button>
+                <button
+                  id="postfix_traversal"
+                  onClick={() => {
+                    setString("Postorder : ");
+                    console.log(traversalString);
+                  }}>
+                  Postorder
+                </button>
               </div>
             </div>
           </div>
@@ -88,11 +111,54 @@ function ExpressionTree() {
 
           <div id="input_div">
             <div id="inner_inputdiv">
-              <button id="evaluatebtn">Evaluate</button>
+              <button
+                id="evaluatebtn"
+                onClick={handleEvaluate}
+                style={{ display: "none" }}>
+                Evaluate
+              </button>
             </div>
           </div>
         </div>
         <Tree />
+        <div id="string_div">
+          <h2 id="traversal_string">{traversalString}</h2>
+        </div>
+        <div id="modal">
+          <div className="controls">
+            <button
+              id="closebtn"
+              onClick={() => {
+                closeModal();
+              }}>
+              X
+            </button>
+          </div>
+          <div className="content">
+            <h5>Enter values for:</h5>
+          </div>
+          <div className="inputs">
+            <div className="inner_field">
+              <h2>A :</h2>
+              <input className="input" placeholder="enter value" />
+            </div>
+            <div className="inner_field">
+              <h2>B :</h2>
+              <input className="input" placeholder="enter value" />
+            </div>
+            <div className="inner_field">
+              <h2>C :</h2>
+              <input className="input" placeholder="enter value" />
+            </div>
+            <div className="inner_field">
+              <h2>D :</h2>
+              <input className="input" placeholder="enter value" />
+            </div>
+          </div>
+          <div className="submit-div">
+            <button className="submiteval">Sumbit</button>
+          </div>
+        </div>
       </div>
     </>
   );

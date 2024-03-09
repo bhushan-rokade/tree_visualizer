@@ -1,9 +1,24 @@
+body {
+  transition: filter all ease 0.4s;
+}
 .main-div {
   display: flex;
   flex-direction: column;
   height: 97vh;
   width: 100%;
   align-items: center;
+}
+#string_div {
+  display: flex;
+  justify-items: flex-start;
+  width: 100%;
+  align-items: center;
+}
+#traversal_string {
+  color: aliceblue;
+  margin-left: 5%;
+  font-family: monospace;
+  margin-bottom: 5%;
 }
 label {
   color: aliceblue;
@@ -46,6 +61,7 @@ label {
   border: transparent;
   text-align: center;
 }
+
 .expinput:disabled {
   color: aliceblue;
 }
@@ -68,6 +84,9 @@ label {
   justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
+}
+#search_input:disabled {
+  color: white;
 }
 .clearbtn {
   margin-top: 1%;
@@ -188,11 +207,11 @@ hr {
   color: aliceblue;
   justify-self: center;
   align-self: center;
-  height: 50%;
+  height: 65%;
 }
 #clearbtn {
   width: 15%;
-  height: 50%;
+  height: 65%;
   place-self: center;
   margin-left: 3%;
   border-radius: 30px;

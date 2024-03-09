@@ -2,61 +2,19 @@ import React, { useState } from "react";
 import "./css/exptree.css";
 import "./../Components/componentStyles/tree.css";
 import Tree from "../Components/BSTree";
-import { handleSearch2 } from "../Components/Bi_Tree_functions";
-const waitsec = () => {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, 500);
-  });
-};
+import { handleSearch2, handleSubmit } from "../Components/Bi_Tree_functions";
 
 function BinaryTree() {
   const [disabled, setDisabled] = useState(false);
 
   const [numbers, setNumbers] = useState(0);
-  const handleSubmit = async () => {
-    //for displaing the binary tree
-    window.scrollBy(0, 1000);
-    for (let i = 1; i <= 9; i++) {
-      if (i > 1) {
-        document.getElementById("n" + (i - 1)).classList.remove("glow");
-      }
-      document.getElementById("n" + i).classList.add("glow");
-      if (i == 2) {
-        for (let n = 1; n <= 2; n++) {
-          document.getElementById("divider" + n).style.visibility = "initial";
-          await waitsec();
-        }
-      } else if (i == 6) {
-        for (let n = 3; n <= 5; n++) {
-          document.getElementById("divider" + n).style.visibility = "initial";
-          document.getElementById("divider" + n).style.visibility = "initial";
-          await waitsec();
-        }
-      } else if (i == 9) {
-        for (let n = 6; n <= 8; n++) {
-          document.getElementById("n" + i).style.visibility = "initial";
-          document.getElementById("divider" + n).style.visibility = "initial";
-          await waitsec();
-          if (n == 8) {
-            document.getElementById("n" + i).classList.remove("glow");
-          }
-        }
-      }
-      if (i < 15 || i == 7) {
-        document.getElementById("n" + i).style.visibility = "initial";
-      }
-      await waitsec();
-    }
-  };
 
   const handleSearch = () => {
     const result = handleSearch2(numbers);
+
     if (result == 0) {
       alert("element not found");
-      handleSubmit();
-      setDisabled(false);
+      location.reload();
     }
   };
 
@@ -85,7 +43,7 @@ function BinaryTree() {
             </button>
           </div>
           <hr style={{ width: "100%" }} />
-          <div id="input_div">
+          <div id="input_div" style={{ display: "none" }}>
             <div id="inner_inputdiv">
               <label id="searchlabel">Enter number for searching</label>
               <input
