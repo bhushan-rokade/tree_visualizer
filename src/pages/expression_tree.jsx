@@ -140,19 +140,35 @@ function ExpressionTree() {
           <div className="inputs">
             <div className="inner_field">
               <h2>A :</h2>
-              <input className="input" placeholder="enter value" />
+              <input
+                className="input"
+                type="number"
+                placeholder="enter value"
+              />
             </div>
             <div className="inner_field">
               <h2>B :</h2>
-              <input className="input" placeholder="enter value" />
+              <input
+                className="input"
+                type="number"
+                placeholder="enter value"
+              />
             </div>
             <div className="inner_field">
               <h2>C :</h2>
-              <input className="input" placeholder="enter value" />
+              <input
+                className="input"
+                type="number"
+                placeholder="enter value"
+              />
             </div>
             <div className="inner_field">
               <h2>D :</h2>
-              <input className="input" placeholder="enter value" />
+              <input
+                className="input"
+                type="number"
+                placeholder="enter value"
+              />
             </div>
           </div>
           <div className="submit-div">

@@ -56,10 +56,11 @@
 .submiteval {
   width: 10vh;
   height: 3.5vh;
-  background-color: rgb(30, 252, 115);
+  background-color: lightgreen;
   border-radius: 10px;
   border: transparent;
   color: black;
+  font-family: monospace;
 }
 .submiteval:hover {
   background-color: rgb(3, 205, 67);
@@ -83,9 +84,9 @@
     height: 40%;
   }
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 545px) {
   #modal {
     width: 70%;
-    height: 50%;
+    height: 55%;
   }
 }
