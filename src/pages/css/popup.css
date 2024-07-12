@@ -10,8 +10,7 @@
   border-radius: 20px;
   filter: blur(0);
 }
-.blur-main :not(#modal):not(#modal *):not(.controls),
-.blur-main :not(#modal):not(#modal *):not(.controls) * {
+.blur-main :not(#modal):not(#modal *) {
   -webkit-filter: blur(2px);
   filter: blur(2px);
 }
