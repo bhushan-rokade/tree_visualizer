@@ -210,6 +210,7 @@ const wait = async () => {
 };
 
 const handleEval = async (A, B, C, D, closeModal) => {
+  setString('');
   if (document.getElementById('n1').classList.contains('glow_selected')) {
     for (let i = 1; i < 8; i++) {
       document.getElementById('n' + i).classList.remove('glow_selected');
