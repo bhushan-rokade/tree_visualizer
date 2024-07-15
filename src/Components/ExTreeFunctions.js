@@ -210,60 +210,68 @@ const wait = async () => {
 };
 
 const handleEval = async (A, B, C, D, closeModal, setString) => {
-  setString('');
-  if (document.getElementById('n1').classList.contains('glow_selected')) {
-    for (let i = 1; i < 8; i++) {
-      document.getElementById('n' + i).classList.remove('glow_selected');
+  console.log((A || B || C || D) != null);
+  if ((A || B || C || D) == null) {
+    alert('Please Enter All The Values!');
+    closeModal();
+  } else {
+    document.getElementById('intro_bst').style.display = 'none';
+    document.getElementById('bst_operations').style.display = 'none';
+    setString('');
+    if (document.getElementById('n1').classList.contains('glow_selected')) {
+      for (let i = 1; i < 8; i++) {
+        document.getElementById('n' + i).classList.remove('glow_selected');
+      }
     }
+    closeModal();
+    document.getElementById('n2').innerHTML = A;
+    document.getElementById('n6').innerHTML = B;
+    document.getElementById('n7').innerHTML = C;
+    document.getElementById('n5').innerHTML = D;
+    document.getElementById('n6').classList.add('glow_selected');
+    await wait();
+    document.getElementById('n7').classList.add('glow_selected');
+    await wait();
+    document.getElementById('n6').style.visibility = 'hidden';
+    await wait();
+    document.getElementById('n7').style.visibility = 'hidden';
+    await wait();
+    document.getElementById('divider5').style.visibility = 'hidden';
+    await wait();
+    document.getElementById('divider6').style.visibility = 'hidden';
+    await wait();
+    const sum1 = parseInt(B) + parseInt(C);
+    document.getElementById('n4').innerHTML = sum1;
+    document.getElementById('n4').classList.add('glow_selected');
+    await wait();
+    document.getElementById('n5').classList.add('glow_selected');
+    await wait();
+    document.getElementById('n4').style.visibility = 'hidden';
+    await wait();
+    document.getElementById('n5').style.visibility = 'hidden';
+    await wait();
+    document.getElementById('divider3').style.visibility = 'hidden';
+    await wait();
+    document.getElementById('divider4').style.visibility = 'hidden';
+    await wait();
+    const sum2 = parseInt(sum1) * parseInt(D);
+    document.getElementById('n3').innerHTML = sum2;
+    document.getElementById('n2').classList.add('glow_selected');
+    await wait();
+    document.getElementById('n3').classList.add('glow_selected');
+    await wait();
+    document.getElementById('n2').style.visibility = 'hidden';
+    await wait();
+    document.getElementById('n3').style.visibility = 'hidden';
+    await wait();
+    document.getElementById('divider1').style.visibility = 'hidden';
+    await wait();
+    document.getElementById('divider2').style.visibility = 'hidden';
+    await wait();
+    const sum3 = parseInt(sum2) + parseInt(A);
+    document.getElementById('n1').innerHTML = sum3;
+    document.getElementById('n1').classList.add('glow_selected');
   }
-  closeModal();
-  document.getElementById('n2').innerHTML = A;
-  document.getElementById('n6').innerHTML = B;
-  document.getElementById('n7').innerHTML = C;
-  document.getElementById('n5').innerHTML = D;
-  document.getElementById('n6').classList.add('glow_selected');
-  await wait();
-  document.getElementById('n7').classList.add('glow_selected');
-  await wait();
-  document.getElementById('n6').style.visibility = 'hidden';
-  await wait();
-  document.getElementById('n7').style.visibility = 'hidden';
-  await wait();
-  document.getElementById('divider5').style.visibility = 'hidden';
-  await wait();
-  document.getElementById('divider6').style.visibility = 'hidden';
-  await wait();
-  const sum1 = parseInt(B) + parseInt(C);
-  document.getElementById('n4').innerHTML = sum1;
-  document.getElementById('n4').classList.add('glow_selected');
-  await wait();
-  document.getElementById('n5').classList.add('glow_selected');
-  await wait();
-  document.getElementById('n4').style.visibility = 'hidden';
-  await wait();
-  document.getElementById('n5').style.visibility = 'hidden';
-  await wait();
-  document.getElementById('divider3').style.visibility = 'hidden';
-  await wait();
-  document.getElementById('divider4').style.visibility = 'hidden';
-  await wait();
-  const sum2 = parseInt(sum1) * parseInt(D);
-  document.getElementById('n3').innerHTML = sum2;
-  document.getElementById('n2').classList.add('glow_selected');
-  await wait();
-  document.getElementById('n3').classList.add('glow_selected');
-  await wait();
-  document.getElementById('n2').style.visibility = 'hidden';
-  await wait();
-  document.getElementById('n3').style.visibility = 'hidden';
-  await wait();
-  document.getElementById('divider1').style.visibility = 'hidden';
-  await wait();
-  document.getElementById('divider2').style.visibility = 'hidden';
-  await wait();
-  const sum3 = parseInt(sum2) + parseInt(A);
-  document.getElementById('n1').innerHTML = sum3;
-  document.getElementById('n1').classList.add('glow_selected');
 };
 export {
   handleEval,

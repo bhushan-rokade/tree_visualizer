@@ -157,10 +157,10 @@ function ExpressionTree() {
             <button
               className='cleareval'
               onClick={() => {
-                setA('');
-                setB('');
-                setC('');
-                setD('');
+                setA(null);
+                setB(null);
+                setC(null);
+                setD(null);
               }}>
               Clear
             </button>
