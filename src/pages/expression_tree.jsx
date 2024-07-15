@@ -10,12 +10,18 @@ import {
   handleInorder,
   handlePreorder,
   handlePostorder,
+  handleEval,
 } from '../Components/ExTreeFunctions';
 
 function ExpressionTree() {
   const [traversalString, setString] = useState('');
   const [modalOpen, setModalOpen] = useState(false);
   const bstArray = [8, 3, 1, 6, 4, 7, 10, 14, 13];
+  const [buildOn, setBuildOn] = useState(false);
+  const [A, setA] = useState(null);
+  const [B, setB] = useState(null);
+  const [C, setC] = useState(null);
+  const [D, setD] = useState(null);
 
   return (
     <>
@@ -32,8 +38,9 @@ function ExpressionTree() {
             <label>Click To Start Tree Building</label>
             <button
               title='Submit'
-              onClick={handleSubmit}
+              onClick={() => handleSubmit(setBuildOn)}
               name='Submit'
+              disabled={buildOn}
               className='buildbtn'>
               Build Tree
             </button>
@@ -106,6 +113,8 @@ function ExpressionTree() {
                 className='input'
                 type='number'
                 placeholder='enter value'
+                value={A}
+                onChange={(e) => setA(e.target.value)}
               />
             </div>
             <div className='inner_field'>
@@ -114,6 +123,8 @@ function ExpressionTree() {
                 className='input'
                 type='number'
                 placeholder='enter value'
+                value={B}
+                onChange={(e) => setB(e.target.value)}
               />
             </div>
             <div className='inner_field'>
@@ -121,7 +132,9 @@ function ExpressionTree() {
               <input
                 className='input'
                 type='number'
+                onChange={(e) => setC(e.target.value)}
                 placeholder='enter value'
+                value={C}
               />
             </div>
             <div className='inner_field'>
@@ -130,12 +143,27 @@ function ExpressionTree() {
                 className='input'
                 type='number'
                 placeholder='enter value'
+                value={D}
+                onChange={(e) => setD(e.target.value)}
               />
             </div>
           </div>
           <div className='submit-div'>
-            <button className='submiteval'>Sumbit</button>
-            <button className='cleareval'>Clear</button>
+            <button
+              className='submiteval'
+              onClick={() => handleEval(A, B, C, D, closeModal)}>
+              Sumbit
+            </button>
+            <button
+              className='cleareval'
+              onClick={() => {
+                setA('');
+                setB('');
+                setC('');
+                setD('');
+              }}>
+              Clear
+            </button>
           </div>
         </div>
       </div>
