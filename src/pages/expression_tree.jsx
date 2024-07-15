@@ -151,7 +151,7 @@ function ExpressionTree() {
           <div className='submit-div'>
             <button
               className='submiteval'
-              onClick={() => handleEval(A, B, C, D, closeModal)}>
+              onClick={() => handleEval(A, B, C, D, closeModal, setString)}>
               Sumbit
             </button>
             <button
