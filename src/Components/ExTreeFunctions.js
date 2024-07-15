@@ -209,7 +209,7 @@ const wait = async () => {
   });
 };
 
-const handleEval = async (A, B, C, D, closeModal) => {
+const handleEval = async (A, B, C, D, closeModal, setString) => {
   setString('');
   if (document.getElementById('n1').classList.contains('glow_selected')) {
     for (let i = 1; i < 8; i++) {
